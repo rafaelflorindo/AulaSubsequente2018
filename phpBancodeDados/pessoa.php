@@ -1,5 +1,5 @@
 
-<form action = "pessoaCadastrar.php	" method = "POST">
+<form action = "pessoaCadastrar.php" method = "POST">
 	<label>Nome: </label>
 	<input type = "text" name="nome"><br />
 
