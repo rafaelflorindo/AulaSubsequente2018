@@ -4,7 +4,6 @@
 	$usuario = "root";
 	$senha = "";
 	$baseDados = "floriculturaRafael";
-
 	/*depreciado versão do mysql 5
 	mysql_connect($local, $usuario,$senha);
 	mysql_select_db($baseDados);
@@ -24,5 +23,4 @@
 			Código do erro: (" . $mysqli->connect_errno . ") Motivo: " . $mysqli->connect_error;
 	}
 	echo "A sua conexão foi realizada com sucesso via " . $mysqli->host_info;
-
-?> 
+?>

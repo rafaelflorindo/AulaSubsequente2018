@@ -10,21 +10,23 @@
   	$dataNascimento = filter_input (INPUT_POST, "dataNascimento");
   	$ativo = filter_input (INPUT_POST, "ativo");
   
-	echo $sql = "insert into cliente  
+  //consulta ao banco de dados
+	$sql = "insert into cliente  
 		(nome, sexo, telefone, email, dataNascimento, ativo) 
 		values 
 		('$nome', '$sexo', '$telefone', '$email', 
 		$dataNascimento, $ativo)";	 	
+	
 	//3 - executar a query (consulta ao banco de dados)
-	exit;
 	$conectar -> query($sql);	
   
   	//4 - verificar se realmente gravou no banco
+  	//affected_rows - verifica quantas linhas foram afetadas com a consulta
   	$numRegistro = $conectar->affected_rows;
   	if ($numRegistro == 1){
 		echo "OK";
 	}else{
     echo "ERRO"; 
   	}
-	$conectar->close();
+	$conectar->close();//fecha a conexão com o banco de dados
 ?>		
