@@ -18,9 +18,9 @@
 	/*A função mysqli_connect_errno() irá retornar o número do código de erro da ultima chamada a função mysqli_connect(). Se não houve erro, esta função irá retornar zero. 
 	A função connect_error irá retornar uma string representando o ultimo erro que aconteceu com a ultima chamada a função mysqli_connect(). Se não houve erro, esta função irá retornar uma string vazia. 	
 	*/
-	if ($mysqli->connect_errno) { 
+	if ($conectar ->connect_errno) { 
 		echo "Houve um erro na tentativa de conexão com MySQL:
-			Código do erro: (" . $mysqli->connect_errno . ") Motivo: " . $mysqli->connect_error;
+			Código do erro: (" . $conectar->connect_errno . ") Motivo: " . $conectar->connect_error;
 	}
-	echo "A sua conexão foi realizada com sucesso via " . $mysqli->host_info;
+	echo "A sua conexão foi realizada com sucesso via " . $conectar->host_info;
 ?>
