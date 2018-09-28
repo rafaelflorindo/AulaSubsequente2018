@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+	<script src="jquery-3.3.1.min.js" type="text/javascript"></script> 
+    <title>Autenticação Sistema Escola</title>
+	
+	<script type="text/javascript">
+	/*$(function(){
+		$('#btn_enviar').click(function(){
+			var usuario = $('#usuario').val();
+			var senha = $('#senha').val();
+			window.AppInventor.setWebViewString(usuario+","+senha);	
+		));
+	});
+	*/
+	$(function(){
+		$('#btn_enviar').click(function(){
+		alert("user add ok")
+			var usuario = $('#usuario').val();
+			var senha = $('#senha').val();
+			alert(usuario);
+			$.post('data.php',{usuario: usuario, senha: senha},function(data){
+				 // verifica o retorno
+				 if(data == 0){
+				 // igual à 0 ok
+					alert('user add ok')
+				 } else	 {
+				 // diferente de 0 erro
+					alert('erro ao adicionar user')
+				 }
+			}	
+		));
+	});
+	</script>
+  </head>
+
+  <body>
+<div id="search_results"></div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <a class="brand" href="#">&nbsp;</a>
+      </div>
+  </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <div class="panel panel-default">
+			<div id="retorno"> </div>
+                <div class="row">
+                    <div class="col-md-12">
+                            <form class="form-signin" method="POST">
+                          
+                                <h2>Login</h2>
+                                <label for="inputlogin" class="sr-only">Email address</label>
+                                <input type="text" name="usuario" id="usuario" class="form-control" value ="rafael.florindo">
+                                <label for="inputPassword" class="sr-only">Password</label>
+                                <input type="password" name="senha" id="senha" class="form-control" value="123">
+                                <button id="btn_enviar" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sessão</button>
+                              </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /container -->
+
+  </body>
+</html>
