@@ -10,7 +10,8 @@ $order = $_POST['ordem'];
 
 //query buscando nome
 
-$sql = $conectar->query("SELECT * FROM usuario");// WHERE nome LIKE '%".$busca."%' or id_cliente LIKE '%".$busca."%' ORDER BY '%".$order."%'");
+$sql = $conectar->query("SELECT * FROM usuario");
+// $sql = $conectar->query("SELECT * FROM usuario WHERE nome LIKE '%".$busca."%' or id_cliente LIKE '%".$busca."%' ORDER BY '%".$order."%'");
 
 $numRegistros = $sql->num_rows;
 
