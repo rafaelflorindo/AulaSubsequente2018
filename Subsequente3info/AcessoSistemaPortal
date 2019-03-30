@@ -1,0 +1,7 @@
+
+NÍVEIS DE ACESSO NO PORTAL ADMINISTRATIVO
+
+1 = total (diretor, administrador do portal)
+2 = listar, buscar, cadastrar, alterar, ativar, inativar (pedagoga, coordenador)
+3 = listar, buscar, cadastrar, alterar [o que ele cadastrou] (professores)
+4 = listar, buscar (alunos)
